@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main() {
+	int pin,passward, i=1;
+	pin=4321;
+	do{
+	
+	printf("\n\n\tenter the passward:\n\n");
+	scanf("%d", &passward);
+	
+	if(passward==pin){
+		printf("\tAccess granted!\n");
+		break;
+	}
+	if(i==1 && passward!=pin){
+		printf(" \t\nWrong pin. Two (2) attempt left\n");
+	}
+	if(i==2 && passward!=pin){
+		printf("\t\nWrong pin. One attempt left\n");
+	}
+	if(i==3 && passward!=pin){
+		printf("\n\tCard Blocked. Please contact your bank!\n\n");
+	}
+	i++;
+}
+while(i<=3);
+	
+	return 0;
+}
